@@ -1,0 +1,10 @@
+# robots.txt for Vinay Gupta Developer Portfolio
+# Standards Checklist #14: Configured robots.txt File
+
+User-agent: *
+Allow: /
+Disallow: /api/admin/
+Disallow: /api/contact?*
+
+# Sitemap Location
+Sitemap: https://vinaygupta-portfolio.com/sitemap.xml
