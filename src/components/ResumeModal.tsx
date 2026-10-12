@@ -18,7 +18,8 @@ import {
   Check, 
   ArrowUp, 
   GraduationCap,
-  Download
+  Download,
+  Globe
 } from 'lucide-react';
 
 interface ResumeModalProps {
@@ -178,6 +179,16 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, profi
                   <span>{profile.location}</span>
                 </div>
 
+                <a
+                  href="https://vinay-gupta-full-stack-portfolio.onrender.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-lg bg-indigo-50/80 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 font-semibold border border-indigo-200/60 dark:border-indigo-800/60 hover:underline"
+                >
+                  <Globe className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0" />
+                  <span>vinay-gupta-full-stack-portfolio.onrender.com</span>
+                </a>
+
                 <div className="flex items-center space-x-2 pt-0.5 print:hidden">
                   <a
                     href={profile.githubUrl}
@@ -305,24 +316,46 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, profi
                   </ul>
                 </div>
 
-                {/* Project 2 */}
+                {/* Project 2: CourierX */}
                 <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50/60 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                    <span className="font-extrabold text-xs sm:text-sm text-slate-900 dark:text-white">
-                      Myntra Clone
-                    </span>
+                    <div className="flex items-center space-x-2">
+                      <span className="font-extrabold text-xs sm:text-sm text-slate-900 dark:text-white">
+                        CourierX — Event-Driven Food Delivery Microservices
+                      </span>
+                      <a 
+                        href="https://github.com/Vinayy777/food-delivery-microservices"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[9px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300 border border-indigo-300 dark:border-indigo-800 hover:underline inline-flex items-center space-x-1"
+                      >
+                        <span>GitHub ↗</span>
+                      </a>
+                    </div>
                     <span className="text-[10px] sm:text-[11px] font-mono font-semibold text-slate-500 dark:text-slate-400">
-                      Jan 2025
+                      Personal Project
                     </span>
                   </div>
                   <div className="text-[11px] sm:text-xs font-mono text-indigo-600 dark:text-indigo-400 font-medium">
-                    React, Node.js, Redux, React Router, HTML, CSS, JavaScript
+                    TypeScript, Node.js, Express, React, Vite, MySQL, MongoDB, WebSockets, JWT
                   </div>
                   <ul className="space-y-1 text-xs text-slate-700 dark:text-slate-300">
                     <li className="flex items-start space-x-2">
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <span className="leading-relaxed">
-                        Built a full-featured e-commerce clone replicating product listings, filtering, and user authentication.
+                        Architected a platform of 6 autonomous microservices (API Gateway, Auth, Catalog, Order, Payment, Delivery) with database-per-service isolation, modeled after Uber Eats/DoorDash.
+                      </span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                      <span className="leading-relaxed">
+                        Implemented an orchestrated Saga pattern with automated compensating refunds, plus idempotency keys to prevent duplicate charges on retries.
+                      </span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                      <span className="leading-relaxed">
+                        Designed polyglot persistence — MySQL for ACID order/payment ledgers, MongoDB 2dsphere indexing for nearest-courier matching in under 15 ms; gateway adds JWT role-based access, correlation-ID tracing, and real-time WebSocket order updates.
                       </span>
                     </li>
                   </ul>

@@ -325,15 +325,16 @@ async function startServer() {
 
 Background & Verified Qualifications:
 - Full Name: Vinay Gupta
-- Role: Full-Stack Developer
+- Role: Full-Stack & Distributed Systems Developer
 - Email: vinaygupta8166@gmail.com | Phone: +91 9506442218 | Location: Varanasi, India
+- GitHub: https://github.com/Vinayy777 | Portfolio: https://vinay-gupta-full-stack-portfolio.onrender.com
 - Education: Bachelor of Computer Applications (BCA, CGPA: 7.2, 2021-2024), 12th Standard from St. Joseph's School, Varanasi (CGPA: 7.2, 2019-2020), English Speaking Course Certification.
 - Technical Skills:
-  * Languages: Python, JavaScript, C#, PHP, TypeScript
-  * Frontend: React.js, Redux Toolkit, HTML5, CSS3, jQuery, Tailwind CSS
-  * Backend: C# .NET, ASP.NET Core, ADO.NET, Node.js, Express.js, PHP, Django, REST APIs
-  * Databases: MS SQL Server (T-SQL, Stored Procedures, Queries), MySQL, MongoDB
-  * Deployment & Tools: Microsoft IIS Server Hosting, Git & GitHub, Postman, Excel, Tableau
+  * Languages: TypeScript, JavaScript, C#, Python, PHP, SQL
+  * Frontend: React 18, Redux Toolkit, Vite, HTML5, CSS3, Tailwind CSS, jQuery
+  * Backend: TypeScript & Node.js (v23), Express.js, C# .NET, ASP.NET Core, ADO.NET, Microservices & Sagas, WebSockets (ws), PHP, Django, REST APIs
+  * Databases: MySQL 8.0 (ACID ledgers), MongoDB (2dsphere geospatial indexing), MS SQL Server
+  * Architecture & DevOps: Distributed Saga Pattern, Polyglot Persistence, API Gateway, Docker & Containers, JWT/RBAC, Microsoft IIS, Git & GitHub, Postman, Monorepo Workspaces
 - Professional Experience:
   1. Software Developer at Gravity Web Technology Pvt Ltd (Jan 2025 - Present):
      - Developed and customized Hospital Information System (HIS), Laboratory Information System (LIS), and EMR modules using C# .NET and MS SQL Server.
@@ -345,14 +346,19 @@ Background & Verified Qualifications:
   3. Data Analyst Intern at Accenture (Jan 2024 - Mar 2024):
      - Structured corporate training in data cleaning, visualization, statistical analysis, and SQL queries.
 - Key Projects:
-  1. Golden Sports Arena — Turf Booking & Management System (Live Site): Built and deployed live production turf reservation platform using React, Redux Toolkit, C#, ASP.NET Core with ADO.NET against SQL Server, hosted independently on IIS.
-  2. Hospital Information System (HIS/LIS/EMR): Healthcare operational workflows, diagnostic tracking, and third-party API interoperability.
-  3. Myntra Clone: Full-featured e-commerce application with React, Node.js, Redux, React Router, HTML, CSS, JavaScript.
+  1. CourierX — Enterprise Event-Driven Food Delivery Microservices (GitHub: https://github.com/Vinayy777/food-delivery-microservices):
+     - Modeled after Uber Eats/DoorDash, featuring 6 autonomous microservices (API Gateway, Auth, Catalog, Order, Payment, Delivery).
+     - Orchestrated Saga Pattern achieving 100% automated compensating refunds upon rejection, eliminating distributed deadlocks across 3 databases.
+     - Polyglot persistence: MySQL 8.0 for ACID ledgers, MongoDB 2dsphere indexing for sub-15ms nearest-courier dispatch.
+     - Ultra-low inter-service latency (<45ms), ~1ms API Gateway overhead, custom idempotency keys (idemp_ord_*) guaranteeing 0 duplicate charges on retries.
+     - Real-time WebSockets event hub, correlation-ID distributed tracing, and npm monorepo workspaces cutting boilerplate by 40%.
+  2. Golden Sports Arena — Turf Booking & Management System (Live Site): Built and deployed live production turf reservation platform using React, Redux Toolkit, C#, ASP.NET Core with ADO.NET against SQL Server, hosted independently on IIS as a freelance project.
+  3. Hospital Information System (HIS/LIS/EMR): Enterprise healthcare software modules, diagnostic tracking, and third-party API interoperability at Gravity Web Technology.
   4. Employee Management System: Role-based platform with PHP, MySQL, HTML, CSS for task delegation, priority filtering, and deadline tracking.
 
 Your Tone & Style:
 - Professional, helpful, articulate, and confident.
-- Emphasize real-world production experience in C# .NET, React, SQL Server, and enterprise healthcare modules.
+- Emphasize real-world experience across both distributed microservices (Sagas, WebSockets, Polyglot DBs) and enterprise healthcare C# .NET / SQL Server systems.
 - Keep responses concise (100-200 words) with crisp markdown bullet points where appropriate.`;
 
       let promptText = message;

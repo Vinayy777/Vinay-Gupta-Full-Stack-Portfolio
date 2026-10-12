@@ -61,11 +61,19 @@ export default function App() {
           !parsed.location.toLowerCase().includes("francisco") &&
           !parsed.location.toLowerCase().includes("california")
         ) {
-          const merged = { ...DEFAULT_DEVELOPER_PROFILE, ...parsed };
-          if (Array.isArray(merged.primaryTechStack) && !merged.primaryTechStack.includes("Docker")) {
-            merged.primaryTechStack = [...merged.primaryTechStack, "Docker"];
-          }
-          return merged;
+          return {
+            ...DEFAULT_DEVELOPER_PROFILE,
+            ...parsed,
+            role: DEFAULT_DEVELOPER_PROFILE.role,
+            headline: DEFAULT_DEVELOPER_PROFILE.headline,
+            tagline: DEFAULT_DEVELOPER_PROFILE.tagline,
+            valueProposition: DEFAULT_DEVELOPER_PROFILE.valueProposition,
+            aboutParagraph1: DEFAULT_DEVELOPER_PROFILE.aboutParagraph1,
+            aboutParagraph2: DEFAULT_DEVELOPER_PROFILE.aboutParagraph2,
+            primaryTechStack: DEFAULT_DEVELOPER_PROFILE.primaryTechStack,
+            stats: DEFAULT_DEVELOPER_PROFILE.stats,
+            githubUrl: DEFAULT_DEVELOPER_PROFILE.githubUrl
+          };
         }
       }
       localStorage.removeItem('developer_profile_custom');

@@ -128,7 +128,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onOpenAssistan
             Featured Projects & Engineering Deep-Dives
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl">
-            Real-world full-stack platforms engineered for reliable healthcare operations, live turf bookings on IIS, and modern web user experiences.
+            Real-world full-stack platforms engineered for event-driven microservices with orchestrated Sagas, reliable healthcare operations (HIS/LIS), and live turf bookings on IIS.
           </p>
         </motion.div>
 
