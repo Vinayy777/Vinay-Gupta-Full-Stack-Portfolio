@@ -366,7 +366,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, profi
                     key={item.category}
                     className="p-2.5 sm:p-3 bg-slate-50/70 dark:bg-slate-800/60 flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-4 text-xs"
                   >
-                    <div className="w-28 font-bold text-slate-900 dark:text-white uppercase tracking-wider font-mono text-[11px] shrink-0">
+                    <div className="w-32 sm:w-36 font-bold text-slate-900 dark:text-white uppercase tracking-wider font-mono text-[11px] shrink-0">
                       {item.category}
                     </div>
                     <div className="font-mono text-slate-700 dark:text-slate-300">

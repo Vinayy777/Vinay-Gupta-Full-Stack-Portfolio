@@ -61,7 +61,11 @@ export default function App() {
           !parsed.location.toLowerCase().includes("francisco") &&
           !parsed.location.toLowerCase().includes("california")
         ) {
-          return { ...DEFAULT_DEVELOPER_PROFILE, ...parsed };
+          const merged = { ...DEFAULT_DEVELOPER_PROFILE, ...parsed };
+          if (Array.isArray(merged.primaryTechStack) && !merged.primaryTechStack.includes("Docker")) {
+            merged.primaryTechStack = [...merged.primaryTechStack, "Docker"];
+          }
+          return merged;
         }
       }
       localStorage.removeItem('developer_profile_custom');

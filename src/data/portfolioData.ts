@@ -11,7 +11,7 @@ export const DEFAULT_DEVELOPER_PROFILE: DeveloperProfile = {
   ctaTextSecondary: "Get In Touch",
   aboutParagraph1: "Full-stack developer with hands-on experience building and customizing healthcare software (HIS/LIS/EMR) using C#, .NET, and MS SQL Server — plus independent and freelance project work spanning React, Node.js, and PHP, including a live production system built and deployed end-to-end. Skilled in requirement analysis, third-party API integration, data migration, and UAT/QA testing. Adept at delivering reliable modules and reports that streamline real-world operations.",
   aboutParagraph2: "My engineering background includes engineering and deploying live systems like the Golden Sports Arena turf management platform (React, Redux Toolkit, ASP.NET Core, ADO.NET, SQL Server, IIS Hosting), executing core medical inquiry and data mining workflows across 5 distinct processes, and completing rigorous data analytics training at Accenture. I am committed to clean code, robust database transactions, and end-to-end product delivery.",
-  primaryTechStack: ["React.js", "C# .NET", "ASP.NET Core", "MS SQL Server", "ADO.NET", "Node.js", "Redux Toolkit", "PHP", "IIS Hosting"],
+  primaryTechStack: ["React.js", "C# .NET", "ASP.NET Core", "MS SQL Server", "ADO.NET", "Node.js", "Docker", "Redux Toolkit", "PHP", "IIS Hosting"],
   experienceLevel: "Full-Stack Developer",
   targetAudience: "Engineering Managers, Technical Recruiters & Enterprise Clients",
   email: "vinaygupta8166@gmail.com",
@@ -78,8 +78,9 @@ export const TECH_STACK_CATEGORIES: TechStackCategory[] = [
   {
     category: 'Database & DevOps',
     icon: 'Database',
-    summary: 'Relational data modeling, query optimization, enterprise hosting, and deployment.',
+    summary: 'Relational data modeling, query optimization, enterprise hosting, containerization, and deployment.',
     skills: [
+      { name: 'Docker & Containers', level: 'Proficient', years: '1 yr', iconName: 'Box', description: 'Containerized deployment, multi-stage Dockerfile builds, Alpine Linux images, and container isolation.', highlight: true },
       { name: 'MS SQL Server', level: 'Expert', years: '2 yrs', iconName: 'Database', description: 'Stored procedures, complex relational joins, data migration, schema design, and T-SQL.', highlight: true },
       { name: 'MySQL', level: 'Advanced', years: '2 yrs', iconName: 'Database', description: 'Normalized relational database schemas, ACID transactions, and indexed query optimizations.', highlight: true },
       { name: 'MongoDB', level: 'Proficient', years: '1.5 yrs', iconName: 'Box', description: 'Document schema design, aggregation pipelines, and NoSQL data persistence.' },
@@ -105,7 +106,7 @@ export const RESUME_SKILLS = [
   { category: 'FRONTEND', skills: 'React.js, Redux Toolkit, HTML, CSS, jQuery' },
   { category: 'BACKEND', skills: 'Node.js, Express.js, ASP.NET Core, ADO.NET, Django' },
   { category: 'DATABASES', skills: 'MS SQL Server, MySQL, MongoDB' },
-  { category: 'TOOLS', skills: 'Git, IIS Hosting, Excel, Tableau, REST APIs' },
+  { category: 'TOOLS & DEVOPS', skills: 'Docker, Containerization, Git, GitHub, IIS Hosting, REST APIs, Postman' },
 ];
 
 export const FEATURED_PROJECTS: FeaturedProject[] = [
