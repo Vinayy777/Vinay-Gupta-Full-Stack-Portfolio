@@ -1,0 +1,165 @@
+================================================================================
+                    DOCKER ESSENTIAL COMMANDS & CHEAT SHEET
+               Created for: Vinay Gupta (Full-Stack Portfolio)
+================================================================================
+
+--------------------------------------------------------------------------------
+SECTION 1: SYSTEM & DAEMON VERIFICATION
+--------------------------------------------------------------------------------
+
+1. Check Docker Version:
+   Command: docker --version
+   Usage:   Verifies that Docker CLI is installed and shows the current version.
+
+2. Check Docker Daemon & Running Containers:
+   Command: docker ps
+   Usage:   Lists all currently active (running) containers.
+            Shows: CONTAINER ID, IMAGE, STATUS, PORTS, and NAMES.
+
+3. List ALL Containers (Running + Stopped):
+   Command: docker ps -a
+   Usage:   Shows every container created on your machine, including ones that
+            have stopped or exited. Useful for troubleshooting and cleanup.
+
+4. List All Downloaded / Built Images:
+   Command: docker images
+   Usage:   Displays all Docker images stored locally on your machine along with
+            Repository name, Tag, Image ID, Created time, and Size.
+
+
+--------------------------------------------------------------------------------
+SECTION 2: BUILDING DOCKER IMAGES (From Dockerfile)
+--------------------------------------------------------------------------------
+
+1. Build an Image from Current Directory:
+   Command: docker build -t vinay-portfolio .
+   Usage:   Reads the 'Dockerfile' in the current directory ('.') and compiles
+            it into a reusable image.
+   Flags:
+     -t vinay-portfolio : Tags (names) the image as 'vinay-portfolio'.
+     .                  : The build context (current folder where Dockerfile is).
+
+2. Build with a Specific Version Tag:
+   Command: docker build -t vinay-portfolio:v1.0 .
+   Usage:   Builds an image with an explicit version tag instead of ':latest'.
+
+
+--------------------------------------------------------------------------------
+SECTION 3: RUNNING CONTAINERS
+--------------------------------------------------------------------------------
+
+1. Run Container in Background with Port Mapping and Environment Variables:
+   Command: docker run -d -p 3001:3001 --name vinay-app-container --env-file .env vinay-portfolio
+   Usage:   Spins up a new live container instance from the 'vinay-portfolio' image.
+   Flags:
+     -d                      : Detached mode (runs silently in the background).
+     -p 3001:3001            : Port forwarding -> <Host-Port>:<Container-Port>.
+                               Maps port 3001 on your computer to port 3001 inside Linux.
+     --name vinay-app-container : Custom human-readable nickname for the container.
+     --env-file .env         : Injects environment variables (API keys, PIN) at runtime.
+     vinay-portfolio         : The image name to run.
+
+2. Run with Interactive Terminal (For Debugging):
+   Command: docker run -it --rm -p 3001:3001 vinay-portfolio
+   Usage:   Runs in foreground, attaches your terminal directly to container logs.
+   Flags:
+     -it                     : Interactive + TTY terminal mode.
+     --rm                    : Automatically deletes container when stopped.
+
+
+--------------------------------------------------------------------------------
+SECTION 4: MANAGING RUNNING CONTAINERS (Logs, Stop, Restart, Shell)
+--------------------------------------------------------------------------------
+
+1. View Live Logs of a Container:
+   Command: docker logs vinay-app-container
+   Usage:   Prints the console output / stdout produced by your server.
+
+2. Follow Logs in Real-Time (Live Streaming):
+   Command: docker logs -f vinay-app-container
+   Usage:   Streams logs in real-time as new requests come in (press Ctrl+C to exit).
+
+3. Stop a Running Container:
+   Command: docker stop vinay-app-container
+   Usage:   Gracefully shuts down the container process.
+
+4. Start a Previously Stopped Container:
+   Command: docker start vinay-app-container
+   Usage:   Turns a stopped container back on without rebuilding it.
+
+5. Restart a Container:
+   Command: docker restart vinay-app-container
+   Usage:   Quickly restarts the container (useful after minor changes).
+
+6. Enter Inside a Running Container (Interactive Linux Shell):
+   Command: docker exec -it vinay-app-container sh
+   Usage:   Opens an interactive Linux command line inside the container.
+            Lets you inspect files inside '/app', check environment variables, etc.
+            Type 'exit' to leave the container.
+
+
+--------------------------------------------------------------------------------
+SECTION 5: CLEANUP COMMANDS (Free Up Disk Space)
+--------------------------------------------------------------------------------
+
+1. Delete a Specific Container:
+   Command: docker rm vinay-app-container
+   Usage:   Deletes a stopped container. (Add -f flag if running: docker rm -f <name>).
+
+2. Delete an Image:
+   Command: docker rmi vinay-portfolio
+   Usage:   Removes the local image from your disk.
+
+3. Clean Up Unused Docker Objects:
+   Command: docker system prune
+   Usage:   Deletes stopped containers, dangling images, and build caches to free disk space.
+
+
+--------------------------------------------------------------------------------
+SECTION 6: DOCKER HUB REGISTRY (Push & Pull Online)
+--------------------------------------------------------------------------------
+
+1. Log In to Docker Hub:
+   Command: docker login
+   Usage:   Prompts for your Docker Hub Username and Password/Token.
+
+2. Tag Image with Docker Hub Username:
+   Command: docker tag vinay-portfolio YOUR_USERNAME/vinay-portfolio:latest
+   Usage:   Creates an alias with your Docker Hub account name so Docker knows
+            which online repository to upload to.
+
+3. Push Image to Docker Hub:
+   Command: docker push YOUR_USERNAME/vinay-portfolio:latest
+   Usage:   Uploads your compressed image layers to your public Docker Hub repository.
+
+4. Pull & Run from Docker Hub on Any Other Machine / Cloud:
+   Command: docker run -d -p 3001:3001 YOUR_USERNAME/vinay-portfolio:latest
+   Usage:   Downloads and runs your image on any computer in the world without
+            needing source code or Node.js.
+
+
+--------------------------------------------------------------------------------
+SECTION 7: DOCKER COMPOSE COMMANDS (Multi-Container Orchestration)
+--------------------------------------------------------------------------------
+
+1. Start All Services Defined in docker-compose.yml:
+   Command: docker compose up -d
+   Usage:   Builds images, creates internal networks, attaches volumes, and runs
+            all containers in background.
+
+2. Stop All Services & Clean Up Networks:
+   Command: docker compose down
+   Usage:   Gracefully stops and removes all containers and internal networks created
+            by docker compose up.
+
+3. View Logs for All Services Together:
+   Command: docker compose logs -f
+   Usage:   Color-coded live log stream from all containers simultaneously.
+
+4. Rebuild Services After Code Changes:
+   Command: docker compose up -d --build
+   Usage:   Forces Docker Compose to rebuild images before starting them.
+
+================================================================================
+                      SAVE THIS FILE FOR FUTURE REFERENCE
+================================================================================

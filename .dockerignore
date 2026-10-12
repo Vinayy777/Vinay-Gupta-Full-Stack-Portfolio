@@ -1,0 +1,22 @@
+# Ignore local dependencies (Docker will install fresh Linux versions inside the container)
+node_modules
+
+# Ignore version control metadata
+.git
+.gitignore
+
+# Ignore local build output (Docker will build fresh inside)
+dist
+build
+
+# Ignore local environment secrets (Never bake secrets into images!)
+.env
+.env.local
+.env.*
+!.env.example
+
+# Ignore logs and temp files
+*.log
+npm-debug.log*
+.DS_Store
+.vscode
