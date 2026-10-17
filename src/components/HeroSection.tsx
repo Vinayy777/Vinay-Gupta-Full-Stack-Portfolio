@@ -256,15 +256,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <code>
 <span className="text-indigo-400">export const</span> <span className="text-amber-300">stackArchitecture</span> = &#123;{'\n'}
 {'  '}<span className="text-slate-400">// Client Layer</span>{'\n'}
-{'  '}frontend: [<span className="text-emerald-300">'React 18'</span>, <span className="text-emerald-300">'TypeScript'</span>, <span className="text-emerald-300">'Redux Toolkit'</span>, <span className="text-emerald-300">'Vite'</span>],{'\n'}
-{'  '}<span className="text-slate-400">// Microservices & Backend</span>{'\n'}
-{'  '}backend: [<span className="text-emerald-300">'TypeScript & Node.js'</span>, <span className="text-emerald-300">'C# .NET'</span>, <span className="text-emerald-300">'Microservices'</span>, <span className="text-emerald-300">'WebSockets'</span>],{'\n'}
+{'  '}frontend: [<span className="text-emerald-300">'Next.js 16'</span>, <span className="text-emerald-300">'React 19'</span>, <span className="text-emerald-300">'TypeScript'</span>, <span className="text-emerald-300">'Tailwind CSS'</span>],{'\n'}
+{'  '}<span className="text-slate-400">// Real-Time & Backend Engines</span>{'\n'}
+{'  '}backend: [<span className="text-emerald-300">'.NET 9 Web API'</span>, <span className="text-emerald-300">'SignalR WebSockets'</span>, <span className="text-emerald-300">'Node.js & Express'</span>],{'\n'}
 {'  '}<span className="text-slate-400">// Polyglot Persistence</span>{'\n'}
-{'  '}database: [<span className="text-emerald-300">'MySQL 8.0 (ACID)'</span>, <span className="text-emerald-300">'MongoDB (2dsphere)'</span>, <span className="text-emerald-300">'MS SQL Server'</span>],{'\n'}
+{'  '}database: [<span className="text-emerald-300">'MS SQL Server (T-SQL)'</span>, <span className="text-emerald-300">'MySQL 8.0'</span>, <span className="text-emerald-300">'MongoDB'</span>],{'\n'}
 {'  '}<span className="text-slate-400">// Architecture & DevOps</span>{'\n'}
-{'  '}devops: [<span className="text-emerald-300">'Docker'</span>, <span className="text-emerald-300">'Distributed Saga Pattern'</span>, <span className="text-emerald-300">'API Gateway'</span>, <span className="text-emerald-300">'IIS'</span>],{'\n'}
+{'  '}devops: [<span className="text-emerald-300">'Docker'</span>, <span className="text-emerald-300">'Distributed Saga Pattern'</span>, <span className="text-emerald-300">'IIS & PowerShell'</span>],{'\n'}
 {'  '}systems: &#123;{'\n'}
-{'    '}microservices: <span className="text-indigo-300">'CourierX (6 Services)'</span>,{'\n'}
+{'    '}realtimeScoring: <span className="text-amber-300">'CricPulse (&lt;50ms Live Turf)'</span>,{'\n'}
+{'    '}microservices: <span className="text-indigo-300">'CourierX (6 Services &amp; Saga)'</span>,{'\n'}
 {'    '}healthcare: <span className="text-rose-300">'HIS / LIS / EMR Modules'</span>,{'\n'}
 {'    '}liveProduction: <span className="text-emerald-300">'Golden Sports Arena'</span>{'\n'}
 {'  '}&#125;{'\n'}

@@ -10,19 +10,19 @@ interface AboutMeSectionProps {
 export const AboutMeSection: React.FC<AboutMeSectionProps> = ({ profile }) => {
   const pillars = [
     {
-      title: 'Distributed Microservices & Event-Driven Systems',
-      desc: 'Architecting scalable microservices platforms with Orchestrated Sagas, polyglot persistence (MySQL & MongoDB), and real-time WebSockets.',
+      title: 'Real-Time SignalR & Scoring State Engines',
+      desc: 'Architecting sub-50ms live scoring platforms with .NET 9 Web API, SignalR WebSockets, tactile 1-tap logging, and custom Box Cricket rules.',
       icon: Cpu,
+    },
+    {
+      title: 'Distributed Microservices & Event-Driven Systems',
+      desc: 'Designing scalable microservices platforms with Orchestrated Sagas, polyglot persistence (MySQL & MongoDB), and real-time WebSockets.',
+      icon: GitPullRequest,
     },
     {
       title: 'Enterprise Healthcare Systems (HIS/LIS/EMR)',
       desc: 'Developing and customizing mission-critical healthcare modules using C#, .NET, and MS SQL Server with strict data integrity.',
       icon: ShieldCheck,
-    },
-    {
-      title: 'Full-Stack Delivery & Live Deployments',
-      desc: 'Building responsive React/TypeScript frontends, containerized Docker environments, and production backends hosted on cloud and IIS.',
-      icon: GitPullRequest,
     },
   ];
 

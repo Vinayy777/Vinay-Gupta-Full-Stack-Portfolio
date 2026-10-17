@@ -361,24 +361,41 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, profi
                   </ul>
                 </div>
 
-                {/* Project 3 */}
+                {/* Project 3: CricPulse */}
                 <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50/60 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                    <span className="font-extrabold text-xs sm:text-sm text-slate-900 dark:text-white">
-                      Employee Management System
-                    </span>
+                    <div className="flex items-center space-x-2">
+                      <span className="font-extrabold text-xs sm:text-sm text-slate-900 dark:text-white">
+                        CricPulse — Real-Time Box & Turf Cricket Live Scoring Platform
+                      </span>
+                      <span className="text-[9px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+                        Live Site ↗
+                      </span>
+                    </div>
                     <span className="text-[10px] sm:text-[11px] font-mono font-semibold text-slate-500 dark:text-slate-400">
-                      Jan 2025
+                      Personal | Live
                     </span>
                   </div>
                   <div className="text-[11px] sm:text-xs font-mono text-indigo-600 dark:text-indigo-400 font-medium">
-                    HTML, CSS, PHP
+                    C#, .NET 9 Web API, SignalR, SQL Server, Next.js 16, React 19, TypeScript, Tailwind CSS, Google OAuth, IIS
                   </div>
                   <ul className="space-y-1 text-xs text-slate-700 dark:text-slate-300">
                     <li className="flex items-start space-x-2">
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                       <span className="leading-relaxed">
-                        Built a PHP-based platform enabling admins and employees to manage tasks with role-based access, status/priority filtering, and deadline tracking.
+                        Architected a Cricbuzz-style live scoring platform on .NET 9 + SignalR WebSockets with a Next.js 16 / React 19 frontend, pushing ball-by-ball updates to all viewers in under 50 ms with zero polling.
+                      </span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                      <span className="leading-relaxed">
+                        Engineered a box-cricket rules engine: 2–11 player squads, Last Man Standing solo-batting logic, auto strike rotation, 6-ball over/bowler changes, 6 dismissal types, and 1-click undo that recalculates totals, overs, and run rate.
+                      </span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                      <span className="leading-relaxed">
+                        Secured scoring with 3-role RBAC (Admin, Scorer, Viewer) via Google OAuth and duplicate-submit guards; built a 5-tab match center and automated zero-downtime IIS deployments with PowerShell.
                       </span>
                     </li>
                   </ul>

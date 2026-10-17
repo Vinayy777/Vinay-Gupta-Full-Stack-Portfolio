@@ -128,7 +128,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onOpenAssistan
             Featured Projects & Engineering Deep-Dives
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl">
-            Real-world full-stack platforms engineered for event-driven microservices with orchestrated Sagas, reliable healthcare operations (HIS/LIS), and live turf bookings on IIS.
+            Real-world full-stack platforms engineered for millisecond-latency live scoring (SignalR & .NET 9), event-driven microservices with orchestrated Sagas, and enterprise healthcare operations.
           </p>
         </motion.div>
 
@@ -156,9 +156,14 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onOpenAssistan
                       <span className="text-[10px] sm:text-xs font-mono font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-950/50 px-2 sm:px-2.5 py-0.5 rounded">
                         0{index + 1} // {project.category}
                       </span>
-                      {project.id === 'project-1' && (
+                      {(project.id === 'project-1' || project.id === 'project-cricpulse') && (
                         <span className="text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
                           Live Site ↗
+                        </span>
+                      )}
+                      {project.id === 'project-courierx' && (
+                        <span className="text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300 border border-indigo-300 dark:border-indigo-800">
+                          GitHub ↗
                         </span>
                       )}
                     </div>
